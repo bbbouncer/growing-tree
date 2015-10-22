@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<svg id="tree" width="500" height="500"></svg>
+</body>
+<script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
+<script>
+  var tree = Snap("#tree");
+  var rootPath = tree.paper.path("M259,490 C286,379 276,333 252,289")
+        .attr({
+          fill: "none"
+        });
+  var rootPathLength = rootPath.getTotalLength();
+  var perRootPathLength = rootPathLength/20;
+  var rootRadius = 4,
+      rootRadiusReduce = 0.15;
+  for (var i = 0;i < 20; i++){
+    axes = rootPath.getPointAtLength(perRootPathLength * i);
+    tree.paper.circle(axes.x,axes.y,rootRadius - rootRadiusReduce * i).attr({
+
+    })
+  }
+//  tree.paper.circle(250,490,40);
+</script>
+</html>

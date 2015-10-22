@@ -1,0 +1,26 @@
+{
+  "name": "growing-tree",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ghostflow/growing-tree",
+  "authors": [
+    "allen <liuyunpeng@qfpay.com>"
+  ],
+  "description": "a SVG simple animation",
+  "main": "index.html",
+  "keywords": [
+    "svg",
+    "snap",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "snap.svg": "~0.4.1"
+  }
+}
