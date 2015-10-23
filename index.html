@@ -21,9 +21,24 @@
   for (var i = 0;i < 20; i++){
     axes = rootPath.getPointAtLength(perRootPathLength * i);
     tree.paper.circle(axes.x,axes.y,rootRadius - rootRadiusReduce * i).attr({
-
-    })
+      fill : "green"
+    });
   }
+  var allCircle = tree.selectAll("circle");
+  for (var i = 0;i < 20; i++){
+    (function(a){
+      setTimeout(function(){
+        allCircle[a].animate({
+          r : '7'
+        },800,mina.linear,function(){
+          this.animate({
+            r: rootRadius - rootRadiusReduce * a
+          },800,mina.linear)
+        })
+      },100*a)
+    })(i)
+  }
+
 //  tree.paper.circle(250,490,40);
 </script>
 </html>
